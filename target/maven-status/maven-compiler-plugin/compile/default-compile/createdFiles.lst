@@ -1,0 +1,9 @@
+com\pika\inventory\domain\User.class
+com\pika\inventory\service\UserDao.class
+com\pika\inventory\controller\BarangController.class
+com\pika\inventory\config\SecurityConfig.class
+com\pika\inventory\service\BarangDao.class
+com\pika\inventory\domain\Permission.class
+com\pika\inventory\App.class
+com\pika\inventory\domain\Barang.class
+com\pika\inventory\domain\Role.class

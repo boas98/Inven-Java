@@ -1,0 +1,54 @@
+<div class="container">
+    <div class="row">
+        <div class="col s12">
+            <div class="card-panel">
+                <div class="row">
+                    <form class="col s12">
+                      <div class="row">
+                        <div class="input-field col s6">
+                            <input id="namaBarang" type="text" class="validate" ng-model="currentBarang.namaBarang">
+                          <label for="namaBarang">Nama Barang</label>
+                        </div>
+                        <div class="input-field col s6">
+                          <input id="stokBarang" type="text" class="validate" ng-model="currentBarang.stokBarang">
+                          <label for="stokBarang">Stok Barang</label>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="input-field col s12">
+                            <button class="btn waves-effect waves-light blue" ng-click="simpanData(currentBarang)">Simpan</button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col s12">
+            <div class="card-panel">
+                <div class="row">
+                    <div class="col s12">
+                      <button class="btn waves-effect waves-light blue" ng-click="tampilkanData()">Show Barang</button>  
+                    </div>
+                </div>
+                 <table>
+                    <thead>
+                        <tr>
+                          <th>Nama Barang</th>
+                          <th>Stock Barang</th></tr>
+                    </thead>
+                    <tbody>
+                      <tr ng-repeat="barang in dataServer">
+                        <td>{{barang.namaBarang}}</td>
+                        <td>{{barang.stokBarang}}</td><td>
+                            <button class="btn waves-effect waves-light blue" ng-click="editData(barang)">Edit</button>
+                            <button class="btn waves-effect waves-light blue" ng-click="hapusData(barang.id)">Hapus</button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>
+        </div>
+    </div>
+</div>
